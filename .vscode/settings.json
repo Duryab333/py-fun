@@ -1,0 +1,89 @@
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// VSCode main project settings file.
+// 
+// Setting up Java in VSCode:
+//  - https://code.visualstudio.com/docs/languages/java
+//  - https://code.visualstudio.com/docs/java/java-tutorial
+// 
+// VSCode Extensions used for Java development:
+//  - Extension Pack for Java (Microsoft)
+//    https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack
+// 
+//  - Code Runner for Java (Jun Han)
+//    https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner
+// 
+// VSCode global settings file and project caches:
+//  - Windows: C:/Users/<user>/AppData/Roaming/Code/User/
+//  - MacOS:   ~/Library/Application\ Support/Code/User/
+//     +
+//     +-- settings.json            ; VSCode global settings file
+//     +-- workspaceStorage         ; VSCode project caches
+// 
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// VSCode commands:
+//  - build: Ctrl-Shift-B
+//  - run:   Ctrl-Alt-N
+//  - clean Java Language Server Workspace: Ctrl-Shift-P
+// 
+// VSCode global settings files:
+//  - Windows: '%APPDATA%/Code/User/settings.json', e.g.
+//             'C:/Users/<USER>/AppData/Roaming/Code/User/settings.json'
+//  - MacOS:   '$HOME/Library/Application\ Support/Code/User/settings.json'
+//  - Linux:   '$HOME/.config/Code/User/settings.json'
+// 
+// VSCode project cache:
+//  - Windows: '%APPDATA%/Code/User/workspaceStorage', e.g.
+//             'C:/Users/<USER>/AppData/Roaming/Code/User/workspaceStorage'
+//  - MacOS:   '$HOME/Library/Application\ Support/Code/User/workspaceStorage'
+// 
+// VSCode installation paths:
+//  - Windows: '%APPDATA%/Local/Programs/Microsoft\ VS\ Code/bin'
+//  - MacOS:   '/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin'
+// 
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+{
+    // Terminal settings, https://code.visualstudio.com/docs/terminal/profiles
+    "terminal.integrated.profiles.windows": {
+        "Bash": {
+          "path": ["bash"],         // 'bash' terminal
+          "args": ["--init-file", "'${workspaceFolder}'/.vscode/launch-terminal.sh"],
+          "icon": "terminal-bash"
+        },
+        "Cmd": {
+            "path": ["cmd"]         // 'cmd.exe' terminal
+        },
+        "PowerShell": {
+            "path": "powershell",   // 'powershell.exe' terminal
+            "args": ["-noexit"]     // ["-noexit", "-file", "${env:APPDATA}\\PowerShell\\custom-init.ps1"],
+        },
+        "Git Bash": null,           // disable terminals from menu
+        "Command Prompt": null,
+        "JavaScript Debug Terminal": null
+    },
+    "terminal.integrated.defaultProfile.windows": "Bash",
+
+    // Editor settings
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true
+    },
+    // "editor.hover.delay": 1500,
+    "code-runner.defaultLanguage": "python",
+    "code-runner.showExecutionMessage": false,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.executorMap": {
+        "python": "python ./main.py",
+        // "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        // "cpp": "cd $dir && g++ -std=c++14 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        // "html": "\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\""
+    },
+    // "code-runner.executorMap": {
+    //     "python": "\"$pythonPath\" $fullFileName",
+    // }
+    "python.testing.unittestArgs": [
+        "-v", "-s", "${workspaceFolder}/tests", "-p", "*_test*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true,
+    "makefile.configureOnOpen": false
+}
