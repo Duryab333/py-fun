@@ -1,5 +1,5 @@
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-# initialize new terminal (bash, zsh/Mac), script is called in settings.json
+# initialize terminal when started in VSCode, script is called in settings.json
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # 
 # probe whether terminal is opened on Mac with zsh and

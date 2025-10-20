@@ -82,9 +82,12 @@ Steps:
 
 1. Step: [*Check Project into Local git Repository*](#7-check-project-into-local-git-repository).
 
-1. Step: [*Unit Tests*](#8-unit-tests).
+1. Step: [*Push Project to Remote *git* Repository*](#8-push-project-to-remote-git-repository).
+
+1. Step: [*Unit Tests*](#9-unit-tests).
 <!-- 
 1. Step: [*Release*](#10-release).
+    - build distributable package, actually release 'make build'
 -->
 
 
@@ -197,6 +200,7 @@ The diagram shows the project scaffold:
  |  |
  |  +--makefile                 # project build file
  |  +--requirements.txt         # installation dependencies
+ |  +--setup.py                 # python build (create distributabe package)
  |  +--main.py                  # main python file, launches 'src/main.py'
  |  +--results.txt              # output with expected results
  |  |
@@ -380,7 +384,7 @@ Correct results can also be found in [*results.txt*](results.txt).
 ---
 ### 7. Check Project into Local *git* Repository
 
-to follow...
+
 
 <!-- 
 Create local *git* repository and file
@@ -402,12 +406,22 @@ git commit -m "add pom.xml src"
 ``` -->
 
 
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+&nbsp;
+---
+### 8. Push Project to Remote *git* Repository
+
+
+Find out how to push a locally created project into a remote *git* repository.
+
+
 
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 &nbsp;
 ---
-### 8. Unit Tests
+### 9. Unit Tests
 
 to follow...
 
