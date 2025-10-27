@@ -1,90 +1,63 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+#------------------------------------------------------------------------------
+# .gitignore with patterns of files and directories to be ignored by git.
+# //
+# see: https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+#------------------------------------------------------------------------------
 
-# C extensions
-*.so
+# ignore git submodule files
+.gitmodules
+.env/
+.vscode/
+.libs/
 
-# Distribution / packaging
-.Python
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*,cover
-.hypothesis/
-
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-local_settings.py
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
+# ignore generated directories and compiled output
+bin/
+out/
 target/
+*.class
 
-# IPython Notebook
-.ipynb_checkpoints
+# ignore Java packaging files, *.war, *.ear
+*.jar
 
-# pyenv
-.python-version
+# ignore other archives and encoded files
+*.7z
+*.gz
+*.rar
+*.tar
+*.tgz
+*.tar.gz
+*.zip
+*.uue*
 
-# celery beat schedule file
-celerybeat-schedule
+# ignore folders with libraries
+lib/
+libs/
 
-# dotenv
-.env
+# ignore folders with branches
+branch/
+branches/
 
-# virtualenv
-.venv/
-venv/
-ENV/
+# ignore folders with javadoc (generated)
+doc/
+docs/
 
-# Spyder project settings
-.spyderproject
+# ignore log directories and *.log files (generated)
+log/
+logs/
+*.log
 
-# Rope project settings
-.ropeproject
+# ignore eclipse IDE project files
+.classpath
+.project
+
+# ignore IntelliJ IDE project files
+.iml
+.idea
+
+# ignore tmp directories and *.tmp files
+tmp/
+temp/
+*.tmp
+
+# ignore OSX system files
+.DS_Store
