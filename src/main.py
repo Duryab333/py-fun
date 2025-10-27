@@ -1,4 +1,4 @@
-from .calculator import Calculator
+from .calculator.Calculator import Calculator
 
 def main():
     # instantiate calculators
@@ -13,20 +13,22 @@ def main():
     # 
     print(f' 1: c1.add(1, 2)\t-> {c1.add(1, 2)}')
     print(f' 2: c2.add(8, 3)\t-> {c2.add(8, 3)}')
-    # print(f' 3: c1.add("1", "1")\t-> {c1.add("1", "1")}')     # <-- uncomment
-    # print(f' 4: c1.add("X", "V")\t-> {c1.add("X", "V")}')
-    # print(f' 5: c2.factorize(99)\t-> {c1.factorize(99)}')
+    print(f' 3: c1.add("1", "1")\t-> {c1.add("1", "1")}')     # <-- uncomment
+    print(f' 4: c1.add("X", "V")\t-> {c1.add("X", "V")}')
+    print(f' 5: c2.factorize(99)\t-> {c1.factorize(99)}')
     _offset=6
     # 
-    # print(f' 6: c1.add("1", "1.600")\t-> {c1.add("1", "1.600")}')
-    # print(f' 7: c1.add("three", "1.600")\t-> {c1.add("three", "1.600")}')
-    # print(f' 8: c1.add("cinco", "siete")\t-> {c1.add("cinco", "siete")}')
-    # print(f' 9: c1.add("семь", "восемь")\t-> {c1.add("семь", "восемь")}')
-    # print(f'10: c1.add("III", "   VIII")\t-> {c1.add("III", "   VIII")}')
-    # print(f'11: c1.add("三", "五")\t\t-> {c1.add("三", "五")}')
+    print(f' 6: c1.add("1", "1.600")\t-> {c1.add("1", "1.600")}')
+    print(f' 7: c1.add("three", "1.600")\t-> {c1.add("three", "1.600")}')
+    print(f' 8: c1.add("cinco", "siete")\t-> {c1.add("cinco", "siete")}')
+    print(f' 9: c1.add("семь", "восемь")\t-> {c1.add("семь", "восемь")}')
+    print(f'10: c1.add("III", "   VIII")\t-> {c1.add("III", "   VIII")}')
+    print(f'11: c1.add("三", "五")\t\t-> {c1.add("三", "五")}')
+    print(f'12: c1.add("three", "four")\t-> {c1.add("three", "four")}')
+    
 
     # set True to run the examples from the expression list
-    _run_list=False
+    _run_list=True
     expr=[
         'c1.add("1", "1.600")',         # 2.6
         'c1.add("three", "1.600")',     # 4.6
@@ -55,5 +57,5 @@ def main():
     for i in range(len(expr)):
         e = expr[i].strip()
         if len(e) > 0:
-            spacer="\t\t" if len(e) < 20 else "\t"
+            spacer="\t\t" if len(e) < 20< else "\t"
             print(f'{i+_offset:2d}: {e}{spacer}-> {eval(e)}')
