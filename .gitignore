@@ -6,9 +6,17 @@
 
 # ignore git submodule files
 .gitmodules
-.env/
 .vscode/
 .libs/
+
+# Virtual environments
+venv/
+env/
+
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
 
 # ignore generated directories and compiled output
 bin/
