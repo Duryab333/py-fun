@@ -1,4 +1,10 @@
 class Calculator():
+    _instance = None
+    def __new__(cls, *arg, **kwargs):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+    
     def __init__(self):
         pass
 
@@ -11,6 +17,13 @@ class Calculator():
     # Prime factorization
     def factorize(self, n):
         n = int(self._to_number(n))
+    
+        # Handle invalid inputs
+        if n < 0:
+            raise ValueError("negative argument")
+        if n == 0:
+            return []  # you can decide how to handle 0
+
         i, factors = 2, []
         while i * i <= n:
             if n % i:
