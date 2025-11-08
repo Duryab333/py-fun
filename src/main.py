@@ -1,4 +1,5 @@
-from .calculator.Calculator import Calculator
+#from .calculator import Calculator
+import src.calculator
 
 def main():
     # instantiate calculators
@@ -57,5 +58,5 @@ def main():
     for i in range(len(expr)):
         e = expr[i].strip()
         if len(e) > 0:
-            spacer="\t\t" if len(e) < 20< else "\t"
+            spacer="\t\t" if len(e) < 20 else "\t"
             print(f'{i+_offset:2d}: {e}{spacer}-> {eval(e)}')

@@ -1,4 +1,5 @@
-from src import main
+#from src import main
+import src
 
 if __name__ == '__main__':
     main()
