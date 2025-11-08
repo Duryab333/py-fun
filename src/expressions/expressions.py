@@ -30,34 +30,38 @@ class Expressions:
         self.a = len(self.numbers)    # <-- given solution, insert one-line expressions below
 
         # b) initialize with first three numbers: [4, 12, 3]
-        self.b = []      # <-- write expression here
+        self.b = self.numbers[:3]     # <-- write expression here
 
         # c) initialize with last three numbers: [1, 8, 7]
-        self.c = []
+        self.c = self.numbers[-3:]
 
         # d) initialize with last three numbers reverse: [7, 8, 1]
-        self.d = []
+        self.d = self.numbers[-3:][::-1]
 
         # e) initialize with odd numbers: [3, 17, 1, 7]
-        self.e = []
+        self.e = [n for n in self.numbers if n%2 !=0 ]
 
         # f) initialize with number of odd numbers: 4
-        self.f = 0
+        #self.f = len([n for n in self.numbers if n%2 !=0])
+        self.f = len(self.e)
 
         # g) initialize with sum_ of odd numbers: 28
-        self.g = 0
+        self.g = sum(self.e)
 
         # h) duplicate numbers removed: [4, 12, 3, 8, 17, 1, 7]
-        self.h = []
+        self.h = sorted(set((self.numbers)))
 
         # i) number of duplicate numbers: 2
-        self.i = 0
+        self.i = len(self.numbers)-len(self.h)
 
         # j) ascending list of squared numbers with no duplicates: [1, 9, 16, 49, 64, 144, 289]
-        self.j = []
-
+        self.j = [n**2 for n in sorted(self.h)]
         # k) initialize with "ODD_LIST", "EVEN_LIST" or "EMPTY_LIST" depending on numbers length
-        self.k = "NEITHER"
+        self.k = (
+        "EMPTY_LIST" if len(self.numbers) == 0
+        else "ODD_LIST" if len(self.numbers) % 2 != 0
+        else "EVEN_LIST")
+
 
 
     def print_results(self):
