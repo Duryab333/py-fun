@@ -1,5 +1,5 @@
-#from .calculator import Calculator
-import src.calculator
+from calculator import Calculator
+#import src.calculator
 
 def main():
     # instantiate calculators
