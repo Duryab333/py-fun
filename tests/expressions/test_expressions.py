@@ -14,6 +14,7 @@ OK
 from unittest import TestCase
 from . import Expressions
 
+#from src.expressions import Expressions
 """
 tested objects (objects "under test", "ut") as instances of the Expressions class
 """

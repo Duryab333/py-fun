@@ -39,7 +39,7 @@ class Expressions:
         self.d = self.numbers[-3:][::-1]
 
         # e) initialize with odd numbers: [3, 17, 1, 7]
-        self.e = [n for n in self.numbers if n%2 !=0 ]
+        self.e = [n for n in self.numbers if n%2 !=0 ] # comprehension
 
         # f) initialize with number of odd numbers: 4
         #self.f = len([n for n in self.numbers if n%2 !=0])
@@ -58,7 +58,7 @@ class Expressions:
         self.j = [n**2 for n in sorted(self.h)]
         # k) initialize with "ODD_LIST", "EVEN_LIST" or "EMPTY_LIST" depending on numbers length
         self.k = (
-        "EMPTY_LIST" if len(self.numbers) == 0
+        "EMPTY_LIST" if len(self.numbers) == 0 # turnery operator 
         else "ODD_LIST" if len(self.numbers) % 2 != 0
         else "EVEN_LIST")
 
